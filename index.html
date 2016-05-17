@@ -2,25 +2,85 @@
 <html lang="pt-br">
 
 <head>
+	<!-- metastag -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Este é um pequeno guideline de Front-End da Alfaiataria Digital" />
+	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:url" content="http://front.alfaiatariavip.com">
 	<meta property="og:title" content="Front-End Guideline">
     <meta property="og:site_name" content="Front Alfaiataria">
     <meta property="og:description" content="Este é um pequeno guideline de Front-End da Alfaiataria Digital">
     <meta property="og:image" content="http://front.alfaiatariavip.com/images/og-image.jpg">
     <meta property="og:image:type" content="image/jpeg">
-	<meta property="og:image:width" content="800"> <!-- /** PIXELS **/ -->
-	<meta property="og:image:height" content="600"> <!-- /** PIXELS **/ -->
+	<meta property="og:image:width" content="600"> <!-- /** PIXELS **/ -->
+	<meta property="og:image:height" content="282"> <!-- /** PIXELS **/ -->
+
+	<!-- title -->
 	<title>Front-End Guideline</title>
+
+	<!-- favicon -->
+	<link rel="icon" href="images/favicon.png" />
+
+	<!-- icones nos sistemas operacionais mobile -->
+    <!-- iPhone iOS7-, iPod Touch e Android 2.2+  -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+	<!-- css -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-	
+	<header class="header">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-2">
+					<h1>
+						<div class="header_logo">
+							<img src="images/logo.png" alt="Front Alfa" class="logo" width="176" height="64">
+						</div>
+					</h1>
+				</div>
+		
+				<div class="col-md-10">
+					<nav class="header__menu">
+						<ul class="menu">
+							<li class="menu__item"><a href="#" class="menu__link">html</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">css</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">js</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+
+		</div>
+		
+	</header>
+
+	<article class="intro">
+		<h2 class="intro__title title-default">
+			Pequeno guia de front-end para alfaiataria digital.
+		</h2>
+		<p class="intro__text text">
+			Uma direção seguindo diversas fontes confiáveis da comunidade Front-End no mundo.
+			Esse guia será atualizado ao decorrer das nossas experiências e tecnologias novas que surgirem.
+		</p>
+
+		<p class="intro__text text">
+			O projeto está hospedado no Github. Para acessa-lo <a href="https://github.com/Ronaldo-Maciel/guideline-front-alfa">clique aqui</a>.
+			Você pode contribuir com o projeto enviando um e-mail para ronaldo@alfaiataria.com com seu Username no github. Após o envio clone
+			o projeto da seguinte maneira:
+			<pre>git clone https://github.com/Ronaldo-Maciel/guideline-front-alfa.git</pre>
+			Digite seu usuário e senha do github e já estará apto a contribuir.
+		</p>
+	</article>
+
 </body>
 
 </html>
