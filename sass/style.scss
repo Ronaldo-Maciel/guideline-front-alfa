@@ -1,53 +1,107 @@
-// TROCAR "PX" POR "EM" NESTE PROJETO
+// TROCAR "PX" POR "EM"
 
+// grid
 @import 'flexboxgrid.scss';
 
+// variaveis
 $color-1:#333;
+$color-2:#fafafa;
+$color-3:#eee;
 
 body{
 	font-family: 'Roboto', sans-serif;
 	color:$color-1;
+	font-size: 62.5%;
 }
 
-h1, ul{
+h1, h2, h3, h4{
 	margin:0px;
 	padding:0px;
+}
+
+ul{
+	padding-left:0;
+	padding-right: 0;
 }
 
 a{
 	color:$color-1;
 }
 
+.guide{
+	font-size: 1em;
+	@media (max-width: 767px){
+    	font-size: 0.8em;
+    }
+}
+
 .box{
-	padding: 45px;
+	padding: 4.5em;
     word-wrap: break-word;
     background-color: #fff;
-    border: 1px solid #eee;
+    border: 1px solid $color-3;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
-    margin:25px auto 25px auto;
+    margin:0px auto 2.5em auto;
+    @media (max-width: 767px){
+    	padding: 2.5em;
+    }
+}
+
+.code{
+	border: solid 1px $color-3;
+	color: #f14e32;
+	padding:10px;
+	border-radius:3px;
 }
 
 .title{
 	text-transform: uppercase;
-	font-size: 18px;
-	border-bottom: 1px solid #eee;
+	font-size: 3.0em;
+	padding:5px 0px;
+}
 
+.guide__title{
+	border-bottom: 1px solid $color-3;
+}
+
+.guide__title-top{
+	padding: 0.9em 1.0em 1.0em;
+	font-size: 1.8em;
+	line-height: 1.7em;
+	background-color:$color-2;
+	border: 1px solid $color-3;
+	border-bottom: 0;
+	border-radius: 3px 3px 0 0;
+	margin-top:3.5em;
+}
+
+.guide__text, .code{
+	font-size: 1.8em;
 }
 
 .header{
-	background-color: #fafafa;
-	padding:20px 0px;
+	background-color: $color-2;
+	padding:2.0em 0;
 }
 
 .logo{
 	display: block;
 	max-width: 100%;
 	height: auto;
+	@media (max-width: 767px){
+		max-width: 135px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
 }
 
 .header__menu{
 	text-align: right;
+	@media (max-width: 767px){
+		text-align: center;
+	}
 }
 
 .menu__item{
@@ -58,7 +112,7 @@ a{
 .menu__link{
 	text-decoration: none;
 	color:$color-1;
-	padding: 8px;
+	padding: 0.8em;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 1.6em;
 }
