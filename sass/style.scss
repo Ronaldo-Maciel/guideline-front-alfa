@@ -28,6 +28,12 @@ a{
 	color:$color-1;
 }
 
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 .guide{
 	font-size: 1em;
 	@media (max-width: 767px){
@@ -35,7 +41,7 @@ a{
     }
 }
 
-.box{
+.guide__box{
 	padding: 4.5em;
     word-wrap: break-word;
     background-color: #fff;
@@ -53,6 +59,15 @@ a{
 	color: #f14e32;
 	padding:10px;
 	border-radius:3px;
+	font-size: 1.4em;
+	max-height: 300px;
+	overflow: auto;
+	background-color: $color-2;
+}
+
+.code--html{
+	@extend .code;
+	color:#7D2727;
 }
 
 .title{
@@ -62,7 +77,7 @@ a{
 }
 
 .guide__title{
-	border-bottom: 1px solid $color-3;
+	@extend .title;
 }
 
 .guide__title-top{
@@ -74,9 +89,12 @@ a{
 	border-bottom: 0;
 	border-radius: 3px 3px 0 0;
 	margin-top:3.5em;
+	@media (max-width: 767px){
+    	margin-top:1.5em;
+    }
 }
 
-.guide__text, .code{
+.guide__text{
 	font-size: 1.8em;
 }
 
@@ -115,4 +133,15 @@ a{
 	padding: 0.8em;
 	text-transform: uppercase;
 	font-size: 1.6em;
+}
+
+.figure{
+	display: table;
+}
+
+.figure__legend{
+	font-size: 1.4em;
+	background-color: $color-3;
+	padding:5px;
+	color:#666;
 }

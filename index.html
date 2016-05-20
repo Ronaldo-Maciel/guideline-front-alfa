@@ -69,12 +69,12 @@
 
 		<div class="container">
 
-			<h2 class="guide__title-top title">
+			<h2 class="guide__title-top">
 				Introdução
 			</h2>
 
-			<div class="box">
-				<h3 class="guide__title title">
+			<div class="guide__box">
+				<h3 class="guide__title">
 					Pequeno guia de front-end para alfaiataria digital
 				</h3>
 
@@ -97,7 +97,7 @@
 				<pre class="code">$ cd guideline-front-alfa</pre>
 				
 				<p class="guide__text">
-					Agora você pode commitar suas contribuições à vontade.
+					Agora você pode "commitar" suas contribuições à vontade.
 				</p>
 			</div>
 			
@@ -109,36 +109,87 @@
 
 		<div class="container">
 
-			<h2 class="guide__title-top title">
+			<h2 class="guide__title-top">
 				HTML
 			</h2>
 
-			<div class="box">
-				<h3 class="guide__title title">
-					HTML semântico
+			<div class="guide__box">
+				<h3 class="guide__title">
+					Informações na tag HEAD
 				</h3>
-				<p class="guide__text">
-					Uma direção seguindo diversas fontes confiáveis da comunidade Front-End no mundo.
-					Esse guia será atualizado ao decorrer das nossas experiências e tecnologias novas que surgirem.
-				</p>
 
 				<p class="guide__text">
-					O projeto está hospedado no Github. Para acessa-lo <a href="https://github.com/Ronaldo-Maciel/guideline-front-alfa">clique aqui</a>. <br>
-					Você pode contribuir com o projeto enviando um e-mail para ronaldo@alfaiataria.com com seu Username no github. Após o envio, inicialize o git bash(ou similiar) dentro da pasta htdocs e clone o projeto da seguinte maneira:
+					O padrão do head do seu html deve conter as seguintes informações:
 				</p>
 
-				<pre class="code">$ git clone https://github.com/Ronaldo-Maciel/guideline-front-alfa.git</pre>
+				<pre class="code--html">
 
-				<p class="guide__text">
-					Entre dentro da pasta:
-				</p>
-
-				<pre class="code">$ cd guideline-front-alfa</pre>
+<code>&lt;head> <br>
+&lt;meta charset="UTF-8"&gt; &lt;!-- Formato de codificação --&gt; <br>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; &lt;!-- Detectar o tamanho da tela --&gt; <br>
+&lt;meta name="description" content="Breve descrição do site" /&gt; <br>
+&lt;meta property="og:locale" content="pt_BR" /&gt; &lt;!-- Idioma do site --&gt;<br>
+&lt;meta property="og:url" content="http://meusite.com"&gt; <br>
+&lt;meta property="og:title" content="meu site"&gt; <br>
+&lt;meta property="og:site_name" content="Nome do Site"&gt; <br>
+&lt;meta property="og:description" content="Breve descrição do site"&gt; <br>
+&lt;meta property="og:image" content="images/og-image.jpg"&gt; &lt;!-- imagem em post rede social --&gt;<br>
+&lt;meta property="og:image:type" content="image/jpeg"&gt; &lt;!-- arquivo da imagem --&gt;<br>
+&lt;meta property="og:image:width" content="600"&gt; &lt;!-- /** PIXELS **/ --&gt;<br>
+&lt;meta property="og:image:height" content="282"&gt; &lt;!-- /** PIXELS **/ --&gt;<br>
+&lt;!-- title --&gt;<br>
+&lt;title&gt;Front-End Guideline&lt;/title&gt;<br>
+&lt;!-- favicon --&gt;<br>
+&lt;link rel="icon" href="images/favicon.png" /&gt;<br>
+&lt;!-- icones do site nos sistemas operacionais mobile --&gt;<br>
+&lt;!-- iPhone iOS7-, iPod Touch e Android 2.2+  --&gt;<br>
+&lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;<br>
+&lt;!-- css --&gt;<br>
+&lt;link rel="stylesheet" href="css/style.css"&gt;<br>
+&lt;/head&gt;
+</code>
+				</pre>
 				
 				<p class="guide__text">
-					Agora você pode commitar suas contribuições à vontade.
+					OBS: Evite carregar Javascript no head. Prefira antes do fechamento da tag body.
 				</p>
-			</div>
+
+			
+
+			<h3 class="guide__title">
+				Semântica
+			</h3>
+
+			<p class="guide__text">
+				Procure sempre utilizar as novas tags do HTML5 para estrutura de conteúdos:
+			</p>
+
+			<figure class="figure">
+				<img src="images/semantica-html.jpg" alt="Semântica no HTML" width="380" height="188" class="img-responsive">
+				<figcaption class="figure__legend"> Exemplo de estrutura </figcaption>
+			</figure>
+
+			<p class="guide__text">
+				Caso você observe figuras no design, procure envolve-lo em uma tag figure com ou sem legenda: <br>
+			</p>
+			<pre class="code--html">
+&lt;figure&gt;
+	&lt;img src="figura.jpg" alt="figura ilustrativa"&gt;
+	&lt;figcaption&gt; legenda da foto &lt;/figcaption&gt;
+&lt;/figure&gt;
+			</pre>
+
+			<p class="guide__text">
+				É importante observar o contexto de imagem no html. Não confunda uma figura, com ícone ou background. <br>
+				- Ícone pode estar dentro de uma tag <code>&lt;i&gt;</code> ou <code>&lt;span&gt;</code>. <br>
+				- Background é apenas uma ilustração que geralmente contém textos e conteúdo por cima. Diferente de uma figura explicativa.
+			</p>
+			
+
+		</div>
+
+
+			
 			
 		</div>
 
