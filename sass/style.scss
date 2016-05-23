@@ -34,6 +34,26 @@ a{
 	display: block;
 }
 
+.btn{
+	display: table;
+	cursor:pointer;
+	border: solid 1px $color-1;
+	padding:10px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	@include transition(all 200ms ease-in);
+}
+.btn:hover{
+	opacity: 0.90;
+}
+
+.btn--download{
+	@extend .btn;
+	background-color:#16a085;
+	color:#fff;
+	border-color:#16a085;
+}
+
 .guide{
 	font-size: 1em;
 	@media (max-width: 767px){
@@ -96,6 +116,7 @@ a{
 
 .guide__text{
 	font-size: 1.8em;
+	line-height: 1.5;
 }
 
 .header{
@@ -145,3 +166,4 @@ a{
 	padding:5px;
 	color:#666;
 }
+
