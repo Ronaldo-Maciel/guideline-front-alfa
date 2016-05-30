@@ -28,6 +28,14 @@ a{
 	color:$color-1;
 }
 
+abbr{
+	cursor:help;
+}
+
+abbr[title] {
+    border-bottom: 0px dotted;
+}
+
 .img-responsive{
 	max-width: 100%;
 	height: auto;
@@ -81,13 +89,25 @@ a{
 	border-radius:3px;
 	font-size: 1.4em;
 	max-height: 300px;
-	overflow: auto;
+	overflow: scroll;
 	background-color: $color-2;
+	height: auto;
 }
 
 .code--html{
 	@extend .code;
 	color:#7D2727;
+}
+
+.code--css{
+	@extend .code;
+	color:#2E8B57;
+}
+
+.code--terminal{
+	@extend .code;
+	color:#fff;
+	background-color: #000;
 }
 
 .title{

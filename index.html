@@ -44,7 +44,7 @@
 				<div class="col-md-2 col-xs-12">
 					<h1>
 						<a href="index.html" class="header_logo">
-							<img src="images/logo.png" alt="Front Alfa" class="logo" width="176" height="59">
+							<img src="images/logo.png" alt="Alfaiataria Digital Guideline Front-End" class="logo" width="176" height="59">
 						</a>
 					</h1>
 				</div>
@@ -122,9 +122,9 @@
 					O padrão do head do seu html deve conter as seguintes informações:
 				</p>
 
-				<pre class="code--html">
+<pre class="code--html">
 
-<code>&lt;head> <br>
+&lt;head> <br>
 &lt;meta charset="UTF-8"&gt; &lt;!-- Formato de codificação --&gt; <br>
 &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; &lt;!-- Detectar o tamanho da tela --&gt; <br>
 &lt;meta name="description" content="Breve descrição do site" /&gt; <br>
@@ -147,11 +147,11 @@
 &lt;!-- css --&gt;<br>
 &lt;link rel="stylesheet" href="css/style.css"&gt;<br>
 &lt;/head&gt;
-</code>
-				</pre>
+
+</pre>
 				
 				<p class="guide__text">
-					OBS: Evite carregar Javascript no head. Prefira antes do fechamento da tag body.
+					<strong>OBS: Evite carregar Javascript no head. Prefira antes do fechamento da tag body.</strong>
 				</p>
 
 			
@@ -170,19 +170,34 @@
 				</figure>
 
 				<p class="guide__text">
-					Caso você observe figuras no design, procure envolve-lo em uma tag <code>&lt;figure&gt;</code> com ou sem legenda: <br>
+					Caso você observe figuras no design, procure envolve-lo em uma tag <code>&lt;<em>figure</em>&gt;</code> com ou sem legenda: <br>
 				</p>
-				<pre class="code--html">
+<pre class="code--html">
 &lt;figure&gt;
 	&lt;img src="figura.jpg" alt="figura ilustrativa"&gt;
 	&lt;figcaption&gt; legenda da foto &lt;/figcaption&gt;
 &lt;/figure&gt;
-				</pre>
+</pre>
 
 				<p class="guide__text">
 					É importante observar o contexto de imagem no html. Não confunda uma figura, com ícone ou background: <br>
-					- Ícone é apenas um símbolo que pode estar dentro de uma tag <code>&lt;i&gt;</code> ou <code>&lt;span&gt;</code> pois não têm uma importância semântica. <br>
+					- Ícone é apenas um símbolo que pode estar dentro de uma tag <code>&lt;<em>i</em>&gt;</code></em> ou <code>&lt;<em>span</em>&gt;</code> pois não têm uma importância semântica. <br>
 					- Background é apenas uma ilustração que geralmente contém textos e conteúdo por cima. Diferente de uma figura autoexplicativa.
+				</p>
+
+				<h3 class="guide__title">
+					acessibilidade
+				</h3>
+
+				<p class="guide__text">
+					Sabemos que a Web é para todos, porém existe uma dificuldade em atender de forma correta pessoas com algum tipo de deficiência. Talvez a falta de conteúdo, tutoriais e afins dificultam alguns parâmetros ao inserir nos nossos códigos.  
+				</p>
+				<p class="guide__text">
+					Navegando pela internet em busca de maiores informações acerca disso, achei um site do próprio governo que oferece um <a href="http://emag.governoeletronico.gov.br/cursodesenvolvedor/desenvolvimento-web/praticas-web-acessivel-marcacao.html#irtopico01" target="_blank"><strong>curso gratuito de Web Acessível</strong></a>.
+				</p>
+
+				<p class="guide__text">
+				 Você vai encontrar regras de marcação, como o uso correto dos níveis das tags <em>&lt;H1&gt;</em> em diante, e também sobre toda a estrutura semântica para leitores de telas (principalmente para deficiêntes visuais).
 				</p>
 				
 
@@ -200,13 +215,115 @@
 			</h2>
 			<div class="guide__box">
 				<h3 class="guide__title">
+					SASS
+				</h3>
+				<p class="guide__text">
+					É um pré-processador css que ajuda muito na produtividade. <br>
+					Com o sass você pode criar varáveis, funções, loops e muito mais. <br>
+					Para utiliza-lo basta acessar a <strong><a href="http://sass-lang.com/install" target="_blank">página oficial</a></strong> e seguir as informações de instalação de acordo com seu <abbr title="Sistema Operacional">S.O</abbr>.
+						
+				</p>
+
+				<p class="guide__text">
+					<strong>OBS: No momento da instalação do Ruby, habilite a opção de PATH. Isso faz com que você possa utilizar o próprio terminal do windows para a chamada do SASS.</strong>
+				</p>
+
+
+				<p class="guide__text">
+					Crie duas pastas, sendo uma SASS e outra CSS na raiz do projeto. Após a criação das pastas inicie o sass acionando a tecla CTRL e ao mesmo tempo o botão direito do mouse. Clique na opção <strong>Abrir janela de comando</strong>.
+					Feito isso digite a linha de comando da seguinte maneira:
+				</p>
+<pre class="code--terminal">
+sass --watch sass/style.scss:css/style.css
+</pre>
+				<p class="guide__text">
+					Caso você queira minificar o css no final do projeto, basta adicionar:
+				</p>
+<pre class="code--terminal">
+sass --watch sass/style.scss:css/style.css --style compressed
+</pre>			
+				<p class="guide__text">
+					Na alfaiataria utilizaremos a extensão <em>.scss</em> ao invés da <em>.sass</em>, pois a primeira permite a síntese do css normalmente no código.
+				</p>
+				<p class="guide__text">
+					Ao utilizar variáveis, prefira não colocar valores da propriedade css. Exemplo: <br>
+					<strong><em>$color-black:#000</em></strong>; <br>
+					Se um dia essa cor for alterada (acontece muito), você terá que mudar o nome da variável. <br>
+					Prefira algo como: <br>
+					<strong><em>color-primary, color-1, color-default </strong></em>e etc.
+				
+				<p class="guide__text">
+					Cuidado com vícios no uso do <em>extend</em>, ou includes dos <em>mixins</em>.
+					Extend só deve ser utilizado na sua classe, caso tenha a mesma familiaridade. Exemplo:
+				</p>
+<pre class="code--css">
+.btn{
+ cursor:pointer;
+ padding:10px;
+ border:solid 1px #000;
+}
+.btn--danger{
+@extend .btn;
+background-color:red;
+}
+</pre>			
+				<p class="guide__text">
+					O output desse css:
+				</p>
+<pre class="code--css">
+
+.btn, .btn--danger{
+ cursor:pointer;
+ padding:10px;
+ border:solid 1px #000;
+ background-color:red;
+}
+</pre>		
+				<p class="guide__text">
+					No exemplo acima, percebe-se que os dois são botões, porém com alguma modificação. Neste caso o uso do extend é válido. Porém extender uma classe <em>.box</em> dentro de uma classe <em>.btn</em> não é uma boa prática.
+				</p>
+
+				<p class="guide__text">
+					Geralmente usamos mixin para reutilizar blocos css (esses podem ser incluídos em qualquer classe do código), passando parâmetros onde os valores podem ser alterados:
+				</p>
+<pre class="code--css">
+ @mixin circle($size) {
+     width: $size;
+     height: $size;
+     border-radius: 100%;
+}
+</pre>			
+				<p class="guide__text">
+				Output do mixin:
+				</p>
+<pre class="code--css">
+ .box {
+     @include circle(50px);
+     background: #333;
+}
+</pre>
+
+				<p class="guide__text">
+				Um artigo muito interessante sobre o uso de mixin e extend. <a href="http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/" target="_blank"><strong>Acesse Aqui</strong></a>.
+				</p>
+
+				<p class="guide__text">
+					Para facilitar nossa vida, temos um site chamado <a href="http://bourbon.io/" target="_blank"><strong>Bourbon</strong></a>, que possue uma biblioteca de mixins que podem ser incluídos a qualquer momento na sua folha de estilos.
+					Com ele você não vai mais precisar inserir prefixos CSS, como webkit, moz, ms e afins. E também conta com diversos mixins para facilitar a escrita. <a href="https://github.com/thoughtbot/bourbon" target="_blank"><strong>Baixe e leia a documentação.</strong></a>
+				</p>
+
+				<h3 class="guide__title">
 					Grid CSS
 				</h3>
 				<p class="guide__text">
 					Vamos utilizar o conceito de grids do <a href="http://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">Bootstrap</a>, com uma inserção do <a href="http://flexboxgrid.com/" target="_blank">Flexbox</a>. <br>
 					Ele usa como padrão o grid do Bootstrap, mas deixando um pouco mais moderno na utilização do flexbox. <br>
-					Uma das outras vantagens é a utilização do SASS, dando um pouco mais de liberdade na utilização de variáveis e mixins nos controladores do grid. <br>
+					Uma das outras vantagens é a utilização do SASS, dando um pouco mais de liberdade na utilização de variáveis e mixins nos controladores do grid.
 				</p>
+				<p class="guide__text">
+				<strong>OBS: Não vamos utilizar o framework bootstrap completo, usaremos apenas o conceito de seus grids. Lembrando que ele é feito como Mobile First, então prefira iniciar o projeto começando do mobile.</strong>
+				</p>
+
 				<p class="guide__text">
 					<a href="#" class="btn--download">Baixar GRID</a>
 				</p>
