@@ -3,7 +3,7 @@
 @import 'grid';
 @import 'grid-framework';
 
-*{
+*, *:before, *:after{
 	@include prefixer(box-sizing, border-box, webkit moz spec);
 }
 //
