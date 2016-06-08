@@ -71,6 +71,13 @@
 		}
 	}
 
+	// @if ($type == center-block) {
+	// 	.center-block-#{$class} {
+	// 		@include align-items(center);
+	// 		@include flex-direction(column);
+	// 	}
+	// }
+
 	@if ($type == end) {
 		.end-#{$class} {
 			@include justify-content(flex-end);
@@ -109,9 +116,15 @@
 		}
 	}
 
-	@if ($type == self) {
-		.self-#{$class} {
-			@include align-self(center);
+	@if ($type == hidden) {
+		.hidden-#{$class} {
+			display: none;
+		}
+	}
+
+	@if ($type == visible) {
+		.visible-#{$class} {
+			display: block;
 		}
 	}
 
@@ -132,7 +145,6 @@
 	@include calc-grid-flex($class, col);
 	@include loop-grid-columns($grid-columns, $class, max-width);
 	@include loop-grid-columns($grid-columns, $class, offset);
-
 	@include calc-grid-flex($class, start);
 	@include calc-grid-flex($class, center);
 	@include calc-grid-flex($class, end);
@@ -143,4 +155,7 @@
 	@include calc-grid-flex($class, bottom);
 	@include calc-grid-flex($class, self);
 	@include calc-grid-flex($class, direction);
+	@include calc-grid-flex($class, hidden);
+	@include calc-grid-flex($class, visible);
+	@include calc-grid-flex($class, center-block);
 }
